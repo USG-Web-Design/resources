@@ -1,0 +1,54 @@
+/* This is a comment */
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1 {
+	background-color: tomato;
+	margin: 0;
+	padding: 120px;
+	text-align: left;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li a {
+	display: block;
+	text-decoration: none;
+	color: forestgreen;
+}
+
+li a:hover {
+	color: blanchedalmond;
+}
+
+li {
+	margin: 0;
+	padding: 10px;
+	background-color: blanchedalmond;
+	font-size: 24px;
+}
+
+li:hover {
+	background-color: forestgreen;
+}
+
+.dropdown-content {
+	display: none;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+
+
+
+
