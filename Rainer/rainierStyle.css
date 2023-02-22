@@ -1,0 +1,95 @@
+
+h1 {
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  color: blue;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin: 10px;
+  padding: 30px;
+
+}
+
+p {
+  text-align: center;
+  font-size: 32px;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  margin: 40px;
+  padding: 45px;
+
+}
+
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a.wildlife{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-image: url("fox.jpg");
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.wildlife:hover {
+  background-image: url("fox2.jpg");
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 0px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.column.side {
+  width: 26%;
+  height: 200px;
+}
+
+.column.middle {
+  width: 45%;
+  height: 200px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
