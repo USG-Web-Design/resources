@@ -1,0 +1,18 @@
+body {
+	font-size: 30px;
+	background: beige;
+	text-align: center;
+}
+
+
+table {
+	border: solid;
+}
+
+td {
+	border: dashed;
+}
+
+th {
+	border: dotted;
+}
