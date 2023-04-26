@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Welcome to the Multiple Choice Questionnaire!</h1>
+	<br>
+	<br>
+	<form>
+		<!-- This is a comment -->
+		<label for="userName"> Enter your name below </label>
+		<br>
+		<input type="text" id="userName" name="userName" value="Amy">
+		<br>
+		<input type="radio" name="Check" id="Yearbook">
+		<label for="Yearbook">Yearbook</label>
+		<br>
+		<input type="radio" name="Check" id="SLG">
+		<label for="SLG">Student Life and Government</label>
+		<br>
+		<input type="radio" name="Check" id="MUN">
+		<label for="MUN">Model United Nations</label>
+		<br>
+		<input type="button" name="Submit" value="Enter" onclick="hello();">
+	</form>
+
+	<p id="response"> Hello, what is your name? </p>
+</body>
+
+<script type="text/javascript">
+	
+	function hello() {
+
+		//This is all part of the function
+		var name = document.getElementById("userName").value;
+
+		var response = "Good to meet you, ";
+		response = response + name;
+
+		var selective = "";
+
+		if (document.getElementById("Yearbook").checked) {
+			selective = "Yearbook";
+		}
+		if (document.getElementById("SLG").checked) {
+			selective = "Student Life Government";
+		}
+		if (document.getElementById("MUN").checked) {
+			selective = "Model UN";
+		}
+
+		response = response + " it is cool that you are in " + selective;
+
+		document.getElementById("response").innerHTML = response;
+
+	}
+
+
+</script>
+
+</html>
