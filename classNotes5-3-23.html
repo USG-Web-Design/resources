@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<center>
+	<h2 id="example1">TACOMA</h2>
+
+	<p id="demo"></p>
+	<br>
+	<button onclick="L()"><img src="london.jpg"></button>
+	<br>
+	<button onclick="S()"><img src="soeul.jpg"></button>
+	<br>
+	<button onclick="P()"><img src="paris.jpg"></button>
+
+	<br>
+	<button onclick="showTime()"> Show the Time </button>
+	
+	</center>
+</body>
+
+<script type="text/javascript">
+	
+
+	const clock = {
+		day: "May 5th",
+		minutes: 15,
+		hour: 11,
+
+		london: function() {
+			this.hour = this.hour + 8;
+		},
+
+		seoul: function() {
+			this.hour = this.hour + 16;
+		},
+
+		paris: function() {
+			this.hour = this.hour + 9;
+		},
+
+		resetTime: function() {
+			this.day = "May 5th";
+			this.hour = 11;
+		},
+
+		checkTime: function() {
+			if (this.hour > 23) {
+				this.hour = this.hour - 24;
+				this.day = "May 6th";
+			}
+		},
+
+		updateTime: function() {
+			this.checkTime();
+			return "Today is " + this.day + ", currently the time is: " + this.hour.toString() + ":" + this.minutes.toString();
+		}
+
+	};
+
+	function showTime() {
+		document.getElementById("demo").innerHTML = clock.updateTime();
+		clock.resetTime();
+	}
+
+	function L() {
+		clock.london();
+		document.getElementById("example1").innerHTML = "LONDON";
+		showTime();
+	}
+	function S() {
+		clock.seoul();
+		document.getElementById("example1").innerHTML = "SEOUL";
+		showTime();
+	}
+	function P() {
+		clock.paris();
+		document.getElementById("example1").innerHTML = "PARIS";
+		showTime();
+	}
+	
+	
+
+
+	/*/variables
+
+	// 1. Numbers (not just integers or floats)
+
+	var x = 5;
+	var y = 4.333333;
+	let grade = 99.3;
+
+	// 2. Strings
+
+	var student = "Jane";
+	var cat = "Leo is a scaredy-cat. He really likes to \"play\" with his sister";
+
+	// 3. Arrays
+
+	const names = ["J.J.", "MatZ", "Chrissy", "Caliope"];
+	names[3] = "Lyzanniken Skywalker";
+
+	document.getElementById("example1").innerHTML = names;
+	*/
+
+
+</script>
+</html>
